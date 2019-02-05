@@ -5,11 +5,11 @@ os:
 language: minimal
 
 env:
-  - QTEST=${TRAVIS_BUILD_DIR}/qspec-1.3.3/test/test_mock.q
+  - QTEST=${TRAVIS_BUILD_DIR}/test_mock.q
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source linux.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then source macos.sh; fi
 
 script:
-  - q $TRAVIS_BUILD_DIR/qspec-1.3.3/app/spec.q $QTEST
+  - q $QSPEC $QTEST
