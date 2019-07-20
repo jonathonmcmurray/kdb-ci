@@ -1,5 +1,4 @@
 MINICONDA_URL="http://repo.continuum.io/miniconda"
-MINICONDA_FILE="Miniconda-latest-Linux-x86_64.sh"
 export CHOME=$HOME/miniconda
 wget "${MINICONDA_URL}/${MINICONDA_FILE}"                           # download Miniconda install script
 bash $MINICONDA_FILE -b -p $CHOME                                   # install Miniconda in $CHOME
