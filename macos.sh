@@ -13,7 +13,4 @@ source $CHOME/etc/profile.d/conda.sh                                # setup env 
 conda activate base                                                 # start base env (so QHOME is defined)
 echo $KCLIC | base64 --decode > $QHOME/kc.lic                       # write kc.lic from env var
 
-conda install --yes --channel jmcmurray qutil                       # install qutil via conda
-wget https://github.com/nugend/qspec/archive/v1.3.3.zip             # download qspec from github
-unzip v1.3.3.zip                                                    # extract qspec
-ln -s $TRAVIS_BUILD_DIR/qspec-1.3.3/lib $QPATH/qspec                # link qspec into qutil package dir
+conda install --yes --channel jmcmurray qspec                       # install qutil & qspec via conda
